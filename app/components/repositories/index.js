@@ -1,9 +1,9 @@
-module.exports = function (app) {
+import controller from './controller';
+import template from './template.html'
+
+export default function (app) {
   return app.component(
     'repositories',
-    {
-      template: require('./template.html'),
-      controller: require('./controller')
-    }
+    {controller, template}
   );
 }

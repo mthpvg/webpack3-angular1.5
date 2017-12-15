@@ -1,7 +1,9 @@
-require('./css/index.css');
+import './css/index.css';
 
-const angular = require('angular');
+import angular from 'angular';
+import github from './services/github';
+import repositories from './components/repositories';
 
 const app = angular.module('myApp', [])
-require('./services/github')(app);
-require('./components/repositories')(app);
+github(app);
+repositories(app);

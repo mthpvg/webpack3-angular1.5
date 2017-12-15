@@ -19,3 +19,7 @@ npm run build
 - angular ui-router
 - es6 with babel
 - find or mock an API
+
+## Sources
+- http://www.benlesh.com/2013/02/angularjs-creating-service-with-http.html
+- https://developer.github.com/v3/

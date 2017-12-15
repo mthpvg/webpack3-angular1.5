@@ -1,6 +1,6 @@
 const githubApiUrl = 'https://api.github.com';
 
-module.exports = function (app) {
+export default function (app) {
   return app.factory('github', function ($http) {
     return {
       getRepositories: function() {
