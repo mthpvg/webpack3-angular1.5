@@ -5,6 +5,7 @@ html
     title Webpack
   body
     <div ng-app="myApp"> 
-      <repositories></repositories>
-      <repository></repository>
+      <a ui-sref="repositories" ui-sref-active="active">Repositories</a>
+      <a ui-sref="repository" ui-sref-active="active">Repository</a>
+      <ui-view></ui-view>
     </div>

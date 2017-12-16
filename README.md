@@ -16,9 +16,10 @@ npm run build
 ```
 
 ## TODOS
-- have multiple components
+- resolve state
+- state.go
+- passing param in state
 - have nested components
-- angular ui-router
 - https://developers.google.com/web/updates/2017/06/headless-karma-mocha-chai
 
 ## Sources
