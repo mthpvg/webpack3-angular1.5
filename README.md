@@ -16,9 +16,10 @@ npm run build
 ```
 
 ## TODOS
+- have multiple components
+- have nested components
 - angular ui-router
-- es6 with babel
-- find or mock an API
+- https://developers.google.com/web/updates/2017/06/headless-karma-mocha-chai
 
 ## Sources
 - http://www.benlesh.com/2013/02/angularjs-creating-service-with-http.html

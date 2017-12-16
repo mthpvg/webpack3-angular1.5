@@ -8,6 +8,12 @@ export default function (app) {
           .then(function(response) {
             return response.data
           });
+      },
+      getRepository: function() {
+        return $http.get(`${githubApiUrl}/repos/mthpvg/azure-web-app`)
+          .then(function(response) {
+            return response.data
+          });
       }
     }
   });
