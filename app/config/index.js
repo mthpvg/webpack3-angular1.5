@@ -14,10 +14,10 @@ export default function (app) {
     });
     $stateProvider.state({
       name: 'repository',
-      url: '/repository',
+      url: '/repository/{name}',
       resolve: {
-        repository: function(github) {
-          return github.getRepository();
+        repository: function(github, $transition$) {
+          return github.getRepository($transition$.params().name);
         }
       },
       component: 'repository'

@@ -9,8 +9,9 @@ export default function (app) {
             return response.data
           });
       },
-      getRepository: function() {
-        return $http.get(`${githubApiUrl}/repos/mthpvg/azure-web-app`)
+      getRepository: function(name) {
+        console.log(name);
+        return $http.get(`${githubApiUrl}/repos/mthpvg/${name}`)
           .then(function(response) {
             return response.data
           });
