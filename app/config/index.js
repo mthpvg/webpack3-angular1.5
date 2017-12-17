@@ -5,12 +5,22 @@ export default function (app) {
     $stateProvider.state({
       name: 'repositories',
       url: '/',
-      template: '<repositories></repositories>'
+      resolve: {
+        repositories: function(github) {
+          return github.getRepositories();
+        }
+      },
+      component: 'repositories'
     });
     $stateProvider.state({
       name: 'repository',
       url: '/repository',
-      template: '<repository></repository>'
+      resolve: {
+        repository: function(github) {
+          return github.getRepository();
+        }
+      },
+      component: 'repository'
     });
   });
 }
