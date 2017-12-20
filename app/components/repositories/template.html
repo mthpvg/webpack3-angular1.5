@@ -1,5 +1,7 @@
 <h1>Repositories</h1>
 
 <div ng-repeat="repository in $ctrl.repositories">
-    <a ui-sref="repository({name: repository.name})">{{repository.name}}</a>
+    <a ui-sref="repositories.repository({name: repository.name})">{{repository.name}}</a>
 </div>
+
+<ui-view></ui-view>

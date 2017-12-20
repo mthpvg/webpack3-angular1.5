@@ -3,8 +3,13 @@ export default function (app) {
     $locationProvider.html5Mode({enabled: true, requireBase: false});
 
     $stateProvider.state({
-      name: 'repositories',
+      name: 'home',
       url: '/',
+      component: 'home'
+    });
+    $stateProvider.state({
+      name: 'repositories',
+      url: '/repositories',
       resolve: {
         repositories: function(github) {
           return github.getRepositories();
@@ -13,8 +18,8 @@ export default function (app) {
       component: 'repositories'
     });
     $stateProvider.state({
-      name: 'repository',
-      url: '/repository/{name}',
+      name: 'repositories.repository',
+      url: '/{name}',
       resolve: {
         repository: function(github, $transition$) {
           return github.getRepository($transition$.params().name);

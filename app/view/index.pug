@@ -4,7 +4,8 @@ html
     meta(charset='UTF-8')
     title Webpack
   body
-    <div ng-app="myApp"> 
+    <div ng-app="myApp">
+      <a ui-sref="home" ui-sref-active="active">Home</a>
       <a ui-sref="repositories" ui-sref-active="active">Repositories</a>
       <ui-view></ui-view>
     </div>
