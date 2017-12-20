@@ -27,5 +27,15 @@ export default function (app) {
       },
       component: 'repository'
     });
+    $stateProvider.state({
+      name: 'repositories.repository.issues',
+      url: '/issues',
+      resolve: {
+        issues: function(github, $transition$) {
+          return github.getIssues($transition$.params().name);
+        }
+      },
+      component: 'issues'
+    });
   });
 }

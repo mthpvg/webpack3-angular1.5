@@ -10,12 +10,18 @@ export default function (app) {
           });
       },
       getRepository: function(name) {
-        console.log(name);
         return $http.get(`${githubApiUrl}/repos/mthpvg/${name}`)
           .then(function(response) {
             return response.data
           });
-      }
+      },
+      getIssues: function(name) {
+        return $http.get(`${githubApiUrl}/repos/mthpvg/${name}/issues`)
+          .then(function(response) {
+            console.log(response.data);
+            return response.data
+          });
+      },
     }
   });
 }

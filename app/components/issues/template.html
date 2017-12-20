@@ -1,0 +1,11 @@
+<h1>Issues</h1>
+
+<div ng-repeat="issue in $ctrl.issues">
+    <a ui-sref="issues.issue({name: issue.name})">
+      <h3>{{issue.title}}</h2>
+      <p>{{issue.body}}</p>
+      <p>{{issue.assignee.login}}</p>
+    </a>
+</div>
+
+<ui-view></ui-view>
